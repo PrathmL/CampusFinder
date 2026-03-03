@@ -1,0 +1,166 @@
+:root {
+    --white: #FFFFFF;
+    --light-gray: #F7FAFC;
+    --border-gray: #E2E8F0;
+    --navy: #2B6CB0;
+    --navy-dark: #2C5282;
+    --header-gray: #2D3748;
+    --text-body: #4A5568;
+    --emerald: #48BB78;
+    --terracotta: #E53E3E;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--white) !important;
+    color: var(--text-body) !important;
+    font-family: 'Inter', sans-serif !important;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* FIX: Ensure all headers and common text are dark and visible */
+h1, h2, h3, h4, h5, h6, .fw-bold {
+    color: var(--header-gray) !important;
+}
+
+p, span, label, td, th {
+    color: var(--text-body);
+}
+
+/* FIX: Override legacy "white" text classes from previous design */
+.text-white, .text-white-50, .text-white-25 {
+    color: var(--text-body) !important;
+}
+
+.text-white-50 {
+    opacity: 0.8;
+}
+
+/* FIX: Redefine .glass-card to be visible on white background */
+.glass-card, .card {
+    background: var(--white) !important;
+    border: 1px solid var(--border-gray) !important;
+    border-radius: 12px !important;
+    box-shadow: var(--shadow-sm) !important;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-body) !important;
+}
+
+/* FIX: Redefine .table-glass for light theme */
+.table-glass {
+    background: var(--white) !important;
+    color: var(--text-body) !important;
+    border: 1px solid var(--border-gray) !important;
+    border-radius: 12px !important;
+}
+
+.table-glass thead {
+    background: var(--light-gray) !important;
+    border-bottom: 2px solid var(--border-gray) !important;
+}
+
+.table-glass th {
+    color: var(--navy) !important;
+    font-weight: 700 !important;
+}
+
+.table-glass td {
+    border-bottom: 1px solid var(--border-gray) !important;
+    color: var(--text-body) !important;
+}
+
+/* Status Badges */
+.badge {
+    font-weight: 600 !important;
+    padding: 0.5em 1em !important;
+}
+
+.bg-danger, .badge-lost { background-color: var(--terracotta) !important; color: white !important; }
+.bg-success, .badge-found { background-color: var(--emerald) !important; color: white !important; }
+.bg-primary { background-color: var(--navy) !important; color: white !important; }
+.bg-warning { background-color: #ECC94B !important; color: #744210 !important; }
+
+/* Dashboard Components */
+.metric-tile {
+    background: var(--white);
+    border: 1px solid var(--border-gray);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--navy);
+}
+
+/* Sidebar Fixes */
+.sidebar-academic {
+    background: var(--light-gray) !important;
+    border-right: 1px solid var(--border-gray) !important;
+}
+
+.sidebar-link {
+    color: var(--text-body) !important;
+    font-weight: 500;
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+    background: var(--navy) !important;
+    color: white !important;
+}
+
+/* Navbar Fixes */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.btn-academic, .btn-primary {
+    background-color: var(--navy) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+}
+
+/* Input Group & Icon Fixes */
+.input-group-text {
+    background-color: var(--light-gray) !important;
+    border: 1px solid var(--border-gray) !important;
+    color: var(--navy) !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.input-group-text i {
+    color: var(--navy) !important;
+    font-size: 1.1rem;
+}
+
+.input-group .form-control {
+    border-left: none !important;
+}
+
+/* Ensure labels are dark and visible */
+.form-label {
+    color: var(--header-gray) !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem;
+}
+
+/* Sticky Footer */
+footer {
+    margin-top: auto;
+    background-color: var(--light-gray) !important;
+    border-top: 1px solid var(--border-gray) !important;
+    color: var(--text-body) !important;
+}
